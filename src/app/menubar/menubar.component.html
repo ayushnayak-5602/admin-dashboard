@@ -1,0 +1,92 @@
+<!-- <mat-toolbar color="primary" class="mat-elevation-z8">
+    <button routerLink="" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Cozentus</span>
+    <span class="example-spacer"></span>
+    <button routerLink="" mat-button>Home</button>
+    <button routerLink="" mat-button>About</button>
+    <button routerLink="" mat-button>Contact</button>
+</mat-toolbar>
+
+<mat-drawer-container>
+    <mat-drawer #drawer opened="true" mode="side">
+        <mat-nav-list>
+            <mat-list-item>
+                <button mat-button><mat-icon>dashboard</mat-icon>Dashboard</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>person</mat-icon>User Profile</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>notebook</mat-icon>Table List</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>notepad</mat-icon>Typography</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>icon</mat-icon>Icons</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>pin</mat-icon>Maps</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button><mat-icon>bell</mat-icon>Notifications</button>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div style="text-align: center;">
+
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container> -->
+
+
+
+
+
+<mat-toolbar color="primary" class="mat-elevation-z8">
+    <button (click)="drawer.toggle()" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Cozentus</span>
+    <span class="example-spacer"></span>
+    <button routerLink="" mat-button>Home</button>    
+    <button routerLink="input" mat-button><mat-icon>person</mat-icon>Login</button>
+    
+</mat-toolbar>
+<mat-drawer-container autosize>
+    <mat-drawer #drawer opened="true" mode="side" position="start">
+    <mat-nav-list>
+        <mat-list-item>
+            <button routerLink="card" mat-button><mat-icon>dashboard</mat-icon> Dashboard</button>
+        </mat-list-item>
+        <mat-list-item>
+            <button routerLink="" mat-button><mat-icon>person</mat-icon> User Profile </button>
+        </mat-list-item>
+        <mat-list-item>
+            <button routerLink="" mat-button><mat-icon>assignment</mat-icon> Table List </button>
+        </mat-list-item>
+        <mat-list-item>
+            <button routerLink="" mat-button><mat-icon>table</mat-icon> Typography </button>
+        </mat-list-item>
+        <mat-list-item>
+            <button mat-button><mat-icon>palette</mat-icon> Icons </button>
+        </mat-list-item>
+        <mat-list-item>
+            <button mat-button><mat-icon>location_on</mat-icon> Maps</button>
+        </mat-list-item>
+        <mat-list-item>
+            <button mat-button><mat-icon>add_alert</mat-icon> Notifications</button>
+        </mat-list-item>
+    </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div style="text-align: center;min-height: 600px;">
+
+            <router-outlet></router-outlet>
+            </div>
+    </mat-drawer-content>
+</mat-drawer-container>
